@@ -14,11 +14,13 @@ const addButtonEl = document.getElementById("add-button")
 const shoppingListEl = document.getElementById("shopping-list")
 
 addButtonEl.addEventListener("click", function() {
+    if(inputFieldEl.value !=0) {
     let inputValue = inputFieldEl.value
     
     push(shoppingListInDB, inputValue)
     
     clearInputFieldEl()
+    }
 })
 
 onValue(shoppingListInDB, function(snapshot) {
